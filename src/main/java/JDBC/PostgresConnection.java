@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class PostgresConnection {
     private static String conUrl = "jdbc:postgresql://localhost:5432/postgres";
     private static String username = "postgres";
-    private static String password = "()2003()";
+    private static String password = "******";
 
     public static Connection connection() {
         try {
