@@ -1,8 +1,6 @@
 package JDBC;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,8 +11,11 @@ import lombok.Setter;
 public class Subjects
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private static String name;
+    @Column(name = "dayOfWeek")
     private static String dayOfWeek;
+    @Column(name = "classrooms")
     private static int[] classrooms;
 
 }

@@ -1,8 +1,6 @@
 package JDBC;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,8 +14,15 @@ import java.util.ArrayList;
 public class Teachers
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private static String fullName;
+
+    @Column(name = "subjects")
     private static ArrayList<String> subjects = new ArrayList<>();
+
+    @Column(name = "classes")
     private static int classes;
+
+    @Column(name = "students")
     private static int students;
 }
