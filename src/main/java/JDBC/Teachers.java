@@ -1,6 +1,7 @@
 package JDBC;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,7 @@ import java.util.ArrayList;
 
 @Entity
 @Table(name="teachers", schema="public")
-@Getter
-@Setter
+@Data
 public class Teachers
 {
     @Id
